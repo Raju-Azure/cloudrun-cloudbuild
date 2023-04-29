@@ -1,7 +1,7 @@
 steps:
  # Build the container image
  - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', 'gcr.io/vyshnavi1-374012/myimage:1', '.']
+   args: ['build', '-t', 'gcr.io/planar-outpost-382217/myimage:1', '.']
  # Push the container image to Container Registry
  - name: 'gcr.io/cloud-builders/docker'
    args: ['push', 'gcr.io/vyshnavi1-374012/myimage:1']
@@ -13,7 +13,7 @@ steps:
    - 'deploy'
    - 'vikas-service'
    - '--image'
-   - 'gcr.io/vyshnavi1-374012/myimage:1'
+   - '/gcr.io/vyshnavi1-374012/myimage:1'
    - '--region'
    - 'us-central1'
    - '--platform'
